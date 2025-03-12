@@ -1,6 +1,6 @@
-package adapter.adaptee.impl;
+package adaptee.impl;
 
-public class MultiBin {
+public class MultiBit {
     
     public Boolean calc(Boolean a, Boolean b){
 

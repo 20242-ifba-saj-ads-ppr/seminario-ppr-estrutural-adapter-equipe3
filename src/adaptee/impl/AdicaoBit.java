@@ -1,8 +1,8 @@
-package adapter.adaptee.impl;
+package adaptee.impl;
 
-import adapter.adaptee.CalcBin;
+import adaptee.CalcBit;
 
-public class AdicaoBin implements CalcBin {
+public class AdicaoBit implements CalcBit {
     
     public Boolean calc(Boolean a, Boolean b){
 

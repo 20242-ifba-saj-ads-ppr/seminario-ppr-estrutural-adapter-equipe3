@@ -1,6 +1,6 @@
-package adapter.adaptee;
+package adaptee;
 
-public interface CalcBin {
+public interface CalcBit {
     
     public Boolean calc(Boolean a, Boolean b);
 
