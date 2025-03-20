@@ -22,17 +22,20 @@ public class FiguraTabela implements Figura {
         this.linhas = linhas;
         this.colunas = colunas;
 
-        for (int i = 0; i < colunas; i++) {
-            List<String> linha = new ArrayList<>();
-            for (int j = 0; j < linhas; j++) {
+        List<String> linha;
+
+        for (int i = 0; i < linhas; i++) {
+            linha = new ArrayList<>();
+            for (int j = 0; j < colunas; j++) {
                 linha.add("null");
             }
-            tabela.add(linha);
+            this.tabela.add(linha);
         }
 
     }
     
-    public void desenhar(int tamanho, char pincel){
+    public void desenhar(int tamanho, char pincel) {
+
         pintor = new PintorLinha(pincel);
         String linha = pintor.pintar(tamanho);
         
@@ -43,9 +46,9 @@ public class FiguraTabela implements Figura {
 
         for(int i = 0; i < linhas; i++){
             System.out.println(celulas);
-            for(int j = 0; j < linhas; j++){
+            for(int j = 0; j < colunas; j++){
 
-                pintor = new PintorConteudo(pincel, 2, this.tabela.get(j).get(i));
+                pintor = new PintorConteudo(pincel, 2, this.tabela.get(i).get(j));
                 String conteudo = pintor.pintar((tamanho - 2) / colunas);
                 System.out.print(conteudo);
             }
@@ -53,9 +56,6 @@ public class FiguraTabela implements Figura {
             System.out.println(celulas);
             System.out.println(linha);
         }
-        
-        
-
     }
 
     public void setCelulaTabela(int linha, int coluna, String conteudo){

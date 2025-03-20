@@ -1,26 +1,26 @@
 import adapter.impl.FiguraTabela;
 
-public class Main {
+public class AppCriarTabelas {
     
     public static void main(String[] args) {
         
-        FiguraTabela figura = new FiguraTabela(3, 3);
+        FiguraTabela figura = new FiguraTabela(3, 8);
 
-        figura.desenhar(50, '-');
+        figura.desenhar(70, '-');
 
-        figura.setCelulaTabela(0, 0, "0 x 0");
-        figura.setCelulaTabela(1, 0, "1 x 0");
-        figura.setCelulaTabela(2, 0, "2 x 0");
+        figura.setCelulaTabela(0, 0, "um");
+        figura.setCelulaTabela(1, 0, "dois");
+        figura.setCelulaTabela(2, 0, "três");
 
-        figura.setCelulaTabela(0, 1, "0 x 1");
-        figura.setCelulaTabela(1, 1, "1 x 1");
-        figura.setCelulaTabela(2, 1, "2 x 1");
+        figura.setCelulaTabela(0, 1, "quatro");
+        figura.setCelulaTabela(1, 1, "cinco");
+        figura.setCelulaTabela(2, 1, "seis");
 
-        figura.setCelulaTabela(0, 2, "0 x 2");
-        figura.setCelulaTabela(1, 2, "1 x 2");
-        figura.setCelulaTabela(2, 2, "2 x 2");
+        figura.setCelulaTabela(0, 2, "sete");
+        figura.setCelulaTabela(1, 2, "oito");
+        figura.setCelulaTabela(2, 2, "nove");
 
-        figura.desenhar(50, '+');
+        figura.desenhar(90, '+');
 
         /* Pintor pintor;
         
