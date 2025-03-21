@@ -1,7 +1,3 @@
----
-export_on_save:
-  html: true
----
 
 # Adpter (Padrão de Projeto Estrutural)
 
@@ -9,9 +5,9 @@ export_on_save:
 Exemplo feito pelo time do Object Pool
 
 ## Motivação
-Durante o desenvolvimento de aplicações em que a utilização de classes é intercambiada através de interfaces, é comum que interfaces previamente incorporadas no projeto possam ser úteis em implementações futuras. Entretanto, novas implementações ou novos requisitos de clientes podem exigir *mudanças* em interfaces que já possuem um contrato prévio com outros modulos do projeto, ou então, utilizar interfaces de um *toolkit* externo pode ser conveniente para o desenvolvimento, mas como reaproveitar essas interfaces sem mudá-las diretamente e afetar as classes que as implementam?
+Durante o desenvolvimento de aplicações em que a utilização de classes é intercambiada através de interfaces, é comum que interfaces previamente incorporadas no projeto possam ser úteis em implementações futuras. Entretanto, novas implementações ou novos requisitos de clientes podem exigir *mudanças* em interfaces que já possuem um contrato prévio com outros módulos do projeto, ou então, utilizar interfaces de um *toolkit* externo pode ser conveniente para o desenvolvimento, mas como reaproveitar essas interfaces sem mudá-las diretamente e afetar as classes que as implementam?
 
-Para este problema o Padrão Adapter propõe que estas interfaces reaproveitáveis **(adaptee)** sejam adaptadas para um novo contexto onde seus contratos serão traduzidos através uma interface adaptadora **(adapter)** sem que sofram mudanças diretamente. 
+Para este problema o Padrão Adapter propõe que estas interfaces reaproveitáveis **(adaptee)** sejam adaptadas para um novo contexto através de uma classe intermediária adaptadora **(adapter)** sem que sofram mudanças diretamente. 
 
 ```plantuml
 @startuml
@@ -42,7 +38,7 @@ Target <|.. Adapter
 @enduml
 ```
 
-Para utilizar o padrão na linguagem Java, é feito uma *composição* dentro da classe **Adaptor** que referencia a classe **Adaptee** e utilizada uma implementação de sua interface de maneira que a adapte para o uso de um cliente.
+Para utilizar o padrão na linguagem Java é feito uma *composição* dentro da classe **Adaptor**, ela deve referenciar a classe **Adaptee** e utilizar uma implementação de sua interface de maneira que sirva as demandas do cliente.
 
 Como exemplo, pense em uma aplicação que imprima figuras em um console, como tabelas de tamanhos, número de colunas e linhas variados. Para a implementação da *interface* ```Figura``` que o cliente terá acesso, há uma classe ```FiguraTabela``` que faz a adaptação de uma interface ```Pintor``` que, por sua vez, possui diferentes implementações com propósito específico de gerar *strings* de linha única, isto é, pintar uma fileira de caracteres. 
 
