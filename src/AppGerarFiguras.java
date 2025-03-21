@@ -1,12 +1,13 @@
 import adapter.impl.FiguraTabela;
+import adapter.Figura;
 
-public class AppCriarTabelas {
+public class AppGerarFiguras {
     
     public static void main(String[] args) {
         
-        FiguraTabela figura = new FiguraTabela(3, 8);
+        FiguraTabela figura = new FiguraTabela(3, 3);
 
-        figura.desenhar(70, '-');
+        figura.desenhar(41, '-');
 
         figura.setCelulaTabela(0, 0, "um");
         figura.setCelulaTabela(1, 0, "dois");
@@ -20,7 +21,7 @@ public class AppCriarTabelas {
         figura.setCelulaTabela(1, 2, "oito");
         figura.setCelulaTabela(2, 2, "nove");
 
-        figura.desenhar(90, '+');
+        figura.desenhar(77, '+');
 
         /* Pintor pintor;
         
