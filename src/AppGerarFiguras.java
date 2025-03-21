@@ -1,5 +1,4 @@
 import adapter.impl.FiguraTabela;
-import adapter.Figura;
 
 public class AppGerarFiguras {
     
