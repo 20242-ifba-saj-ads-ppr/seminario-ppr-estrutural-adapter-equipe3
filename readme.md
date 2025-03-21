@@ -5,7 +5,7 @@ export_on_save:
 
 # Adpter (Padrão de Projeto Estrutural)
 
-### Adaptando operação com bits para operações de números binários 
+### Adaptando classes de construção de strings para gerar figuras no console
 Exemplo feito pelo time do Object Pool
 
 ## Motivação
