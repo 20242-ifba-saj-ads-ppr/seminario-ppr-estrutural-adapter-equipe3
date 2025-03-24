@@ -11,7 +11,7 @@ Exemplo feito pelo time do Object Pool
 ## Motivação
 Durante o desenvolvimento de aplicações em que a utilização de classes é intercambiada através de interfaces, é comum que interfaces previamente incorporadas no projeto possam ser úteis em implementações futuras. Entretanto, novas implementações ou novos requisitos de clientes podem exigir *mudanças* em interfaces que já possuem um contrato prévio com outros módulos do projeto, ou então, utilizar interfaces de um *toolkit* externo pode ser conveniente para o desenvolvimento, mas como reaproveitar essas interfaces sem mudá-las diretamente e afetar as classes que as implementam?
 
-Para este problema o Padrão Adapter propõe que estas interfaces reaproveitáveis **(adaptee)** sejam adaptadas para um novo contexto através de uma classe intermediária adaptadora **(adapter)** sem que sofram mudanças diretamente. 
+Para este problema o Padrão Adapter propõe que estas interfaces reaproveitáveis **(adaptee)** sejam adaptadas para um novo contexto através de uma classe intermediária adaptadora **(adapter)** sem que sofram mudanças diretamente. Permitindo reutilizar código legado ou bibliotecas externas sem comprometer a compatibilidade com o restante do sistema, evitando efeitos colaterais em módulos que já dependem dessas interfaces.
 
 ```plantuml
 @startuml
